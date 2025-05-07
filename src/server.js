@@ -16,7 +16,7 @@ const io = initializeSocket(server);
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://depi-front-delta.vercel.app/',
     credentials: true
 }));
 app.use(express.json());
