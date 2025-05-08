@@ -17,7 +17,9 @@ const io = initializeSocket(server);
 // Middleware
 app.use(cors({
     origin: 'https://depi-front-delta.vercel.app',
-    credentials: true
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 app.use(cookieParser());
